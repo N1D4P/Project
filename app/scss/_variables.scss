@@ -1,0 +1,30 @@
+// Colors
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$purple: #ab01d5;
+$orange: hsl(25, 100%, 57%);
+$red: hsl(358, 100%, 53%);
+$pink: hsl(291, 90%, 55%);
+$black: hsl(0, 0%, 0%);
+
+.purpleNeon {
+    color: hsl(288, 99%, 42%);
+    text-shadow:
+      0 0 10px #ab01d5,
+      0 0 21px #ab01d5,
+      0 0 42px #ab01d5,
+      0 0 92px #ab01d5,
+      0 0 102px #ab01d5,
+  }
+
+// Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem;
+$font-xlg: 3.25rem;
+
