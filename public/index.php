@@ -1,5 +1,7 @@
 <?php
-require_once(__DIR__ . "/../app/src/models/db.php");
+require_once(__DIR__ . "\..\app\src\db.php");
+require_once(__DIR__ . "\..\app\src\controllers\CategoryController.php");
+require_once(__DIR__ . "\..\app\src\controllers\MainController.php");
 ?>
 
 <!-- index.php -->
@@ -48,11 +50,5 @@ $url = $_SERVER['REQUEST_URI'];
     echo $e->getMessage();
   }
 ?>
-    <h1>Categories</h1>
-    <ul>
-<?php
-
-        ?>
-        </ul>
 </body>
 </html>

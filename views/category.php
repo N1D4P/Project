@@ -1,3 +1,5 @@
+
+<h1>Bienvenue sur la page Catégorie !</h1>
 <ul>
   <?php
   // Afficher les catégories

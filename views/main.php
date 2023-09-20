@@ -1,5 +1,5 @@
 <?php
-  require_once("./views/header.html");
+  require_once("header.html");
   ?>
     <section class="hero">
       <div class="container">
