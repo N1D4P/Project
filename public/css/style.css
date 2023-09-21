@@ -2,6 +2,9 @@
   color: hsl(288, 99%, 42%);
   text-shadow: 0 0 10px #ab01d5, 0 0 21px #ab01d5, 0 0 42px #ab01d5, 0 0 92px #ab01d5, 0 0 102px #ab01d5;
 }
+body{
+  background-color:rgb(15, 1, 23);
+}
 
 .has-fade {
   visibility: hidden;

@@ -1,3 +1,8 @@
+<head>
+    <title>Catégories</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
 <?php
   require_once("header.html");
   ?>
@@ -12,7 +17,7 @@
             et films les plus populaires de tous les temps, ou essayez nos recommandations
             les plus originales !
           </p>
-          <a href="./app/views/category.html" class="button hero__cta">Voir Catégories</a>
+          <a href="/category" class="button hero__cta">Voir Catégories</a>
         </div>
       </div>
     </section>
@@ -143,3 +148,4 @@
         </div>
       </div>
     </section>
+  </body>
