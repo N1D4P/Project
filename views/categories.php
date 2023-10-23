@@ -4,7 +4,7 @@
   </head>
   <body>
     <?php
-      require_once("header.html");
+      require_once("header.php");
     ?>
     <h1>Bienvenue sur la page Catégorie !</h1>
     <ul>

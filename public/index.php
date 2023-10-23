@@ -1,5 +1,9 @@
 <?php
 require_once(__DIR__ . "\..\app\src\db.php");
+require_once(__DIR__ . "\..\app\src\controllers\Controller.php");
+require_once(__DIR__ . "\..\app\src\controllers\RegisterController.php");
+require_once(__DIR__ . "\..\app\src\controllers\LoginController.php");
+require_once(__DIR__ . "\..\app\src\controllers\LogoutController.php");
 require_once(__DIR__ . "\..\app\src\controllers\CategoryController.php");
 require_once(__DIR__ . "\..\app\src\controllers\MainController.php");
 require_once(__DIR__ . "\..\app\src\controllers\MovieController.php");
@@ -8,7 +12,7 @@ require_once(__DIR__ . "\..\app\src\controllers\MovieController.php");
 <html>
     <?php
     try{
-    $url = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI'];
             //Si l'utilisateur demande une autre page que la page d'accueil
             if($url!=="/"){
                 //ucfirst met la 1ère lettre en majuscule, substr($url,1) enlève le "/" au début de la chaîne de caractère

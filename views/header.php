@@ -17,11 +17,14 @@
         <a href="#">A propos</a>
         <a href="#">Contact</a>
         <a href="/category">Catégories</a>
-        <a href="login.php">Connexion</a>
+        <?php 
+        // Si l'utilisateur est connecté, j'affiche Déconnexion, sinon Connexion
+          if($_SESSION["id"] !== null) echo "<a href='/logout'>Déconnexion</a>";
+          else echo "<a href='/login'>Connexion</a>";
+        ?>
       </div>
 
-      <a href="registration.php" class="button header__cta hide-for-mobile"
-        >S'inscrire</a>
+      <a href="/register" class="button header__cta hide-for-mobile">S'inscrire</a>
     </nav>
 
     <div class="header__menu has-fade">
@@ -29,7 +32,11 @@
       <a href="">A propos</a>
       <a href="">Contact</a>
       <a href="">Catégories</a>
-      <a href="login.php">Connexion</a>
+      <?php 
+        // Si l'utilisateur est connecté, j'affiche Déconnexion, sinon Connexion
+        if(isset($_SESSION["id"])) echo "<a href='/logout'>Déconnexion</a>";
+        else echo "<a href='/login'>Connexion</a>";
+      ?>
     </div>
     <script src="./assets/js/script.js"></script>
   </header>

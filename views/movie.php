@@ -4,7 +4,7 @@
 </head>
 <body>
     <?php
-        require_once("header.html");
+        require_once("header.php");
     ?>
     <h1><?php echo $movie["content_name"]; ?></h1>
     <a href=<?php echo "/category?id=" . $movie["category_id"]; ?>><?php echo $movie["category"]; ?></a>
