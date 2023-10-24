@@ -82,69 +82,25 @@
         <h2>Derniers ajouts</h2>
 
         <div class="article__grid">
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/couv-5.jpg')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">De Christopher Nolan</div>
-              <div class="article__title">
-                Interstellar
-              </div>
-              <div class="article__description">
-                Le monde que nous connaissons va mourrir à petit feu. Embarquez
-                pour un voyage dans le but de trouver un nouveau monde pour l'humanité.
-              </div>
-            </div>
-          </a>
+          <?php foreach($movies as $movie){
+            echo '<a href="/movie?id=' . $movie["content_id"] . '" class="article__item">
+                    <div
+                      class="article__image"
+                      style="background-image: url(' . $movie["cover_path"] .')"
+                    ></div>
+                    <div class="article__text">
+                      <div class="article__author">De ' . $movie["director"] . '</div>
+                      <div class="article__title">
+                        ' . $movie["content_name"] . '
+                      </div>
+                      <div class="article__description">
+                        ' . $movie["content_desc"] . '
+                      </div>
+                    </div>
+                  </a>';
+          }
+        ?>
 
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/drive.webp')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">De Nicolas Winding Refn</div>
-              <div class="article__title">
-                Drive
-              </div>
-              <div class="article__description">
-                Un jeune homme solitaire, The Driver, conduit le jour à Hollywood pour le cinéma en tant que cascadeur et la nuit pour des truands. Ultra professionnel et peu bavard, il a son propre code de conduite. Jamais il n'a pris part aux crimes de ses employeurs autrement qu'en conduisant - et au volant, il est le meilleur !              </div>
-            </div>
-          </a>
-
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/breakingbad.png')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">De Vince Gilligan</div>
-              <div class="article__title">
-                Breaking Bad
-              </div>
-              <div class="article__description">
-                Walter White, 50 ans, est professeur de chimie dans un lycée. Pour réunir de l'argent afin de subvenir aux besoins de sa famille, Walter met ses connaissances en chimie à profit pour fabriquer et vendre de la meth.
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="background-image: url('/images/bourne.jpeg')"
-            ></div>
-            <div class="article__text">
-              <div class="article__author">De Doug Liman</div>
-              <div class="article__title">
-                Jason Bourne : La mémoire dans la peau
-              </div>
-              <div class="article__description">
-                Portant des traces de balles dans le dos, un homme à l'identité inconnue a miraculeusement survécu. Cependant, il ne se souvient plus de rien, même pas de son nom ou des raisons pour lesquelles on a tenté de le tuer.
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </section>

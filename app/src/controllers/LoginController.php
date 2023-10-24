@@ -1,6 +1,5 @@
 <?php
 // Afin de modifier la variable globale $_SESSION, j'ouvre la session
-session_start();
 
 class LoginController extends Controller{
     public function index(){
@@ -22,7 +21,7 @@ class LoginController extends Controller{
                         // On vérifie si le mot de passe dans la db est bien la version hash du mot de passe entré par l'utilisateur
                         if(password_verify($password, $result['password'])){
                             // Si c'est le cas, on stocke l'id de l'utilisateur et on le redirige vers la page d'accueil
-                            $_SESSION['id'] = $username;
+                            $_SESSION['id'] = $result["customer_id"];
                             $this->header("/");
                         }
                         // Sinon, le mot de passe est mauvais et on affiche le message d'erreur

@@ -1,6 +1,5 @@
 <?php
 // Afin de modifier la variable globale $_SESSION, j'ouvre la session
-session_start();
 
 class RegisterController extends Controller{
     public function index(){

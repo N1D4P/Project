@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once(__DIR__ . "\..\app\src\db.php");
 require_once(__DIR__ . "\..\app\src\controllers\Controller.php");
 require_once(__DIR__ . "\..\app\src\controllers\RegisterController.php");
