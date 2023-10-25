@@ -1,6 +1,6 @@
 <?php
 
-
+// commentaire
 class AdminController extends Controller{
     public function index(){
         if(isset($_SESSION["id"])){
