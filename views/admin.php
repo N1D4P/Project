@@ -95,12 +95,12 @@
 
                 <?php if(isset($_POST["action_category"])) { ?>
                     <form id="movie_form" method="post">
-                        <input type="text" name="category_name" placeholder="Nom de la catégorie" <?php if($_POST["action_category"]!=="create") echo "value='" . $categoryUpdated['category_name'] . "'"; ?> >
-                        <input type="text" name="category_desc" placeholder="Description" <?php if($_POST["action_category"]!=="create") echo "value='" . $categoryUpdated['category_desc'] . "'"; ?>>
+                        <input type="text" name="category_name" placeholder="Nom de la catégorie" <?php if($_POST["action_category"]!=="create") echo "value='" . htmlspecialchars($categoryUpdated['category_name']) . "'"; ?> >
+                        <input type="text" name="category_desc" placeholder="Description" <?php if($_POST["action_category"]!=="create") echo "value='" . htmlspecialchars($categoryUpdated['category_desc']) . "'"; ?>>
                         <label for="new">Visibilité</label>
-                        <select name="active" <?php if($_POST["action_category"]!=="create") echo "value='" . $categoryUpdated['active'] . "'"; ?>>
-                            <option value="1">Actif</option>
-                            <option value="0">Désactivé</option>
+                        <select name="active" >
+                            <option value="1" <?php if($_POST["action_category"]!=="create") echo $categoryUpdated['active']===1 ? "selected='selected'" : ""; ?>>Actif</option>
+                            <option value="0" <?php if($_POST["action_category"]!=="create") echo $categoryUpdated['active']===0 ? "selected='selected'" : ""; ?>>Désactivé</option>
                         </select>   
                         <?php 
                             if($_POST["action_category"] === "create")
