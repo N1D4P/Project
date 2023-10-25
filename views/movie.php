@@ -33,8 +33,8 @@
                 echo "</div><button type='submit' id='rating' name='rating' value='". $ratingFromUserData["value"] ."'>Valider</button>
                     </form></div>";
                 // On affiche la vidéo du film
-                echo'<video controls width="500">
-                        <source src=<?php echo $movie["content_path"] ?> >
+                echo '<video controls width="500">
+                        <source src=' . $movie["content_path"] . '>
                     </video>';
             }
             else echo '</div><div id="not_connected">

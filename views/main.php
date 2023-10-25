@@ -1,5 +1,5 @@
 <head>
-    <title>Catégories</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>

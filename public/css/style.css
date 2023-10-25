@@ -467,6 +467,20 @@ ul {
   line-height: 1.5;
 }
 
+.authentification_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(21, 21, 21);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px hsl(288, 99%, 42%);
+}
+.authentification_form input, .authentification_form select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .articles {
   background-color: hsl(0, 0%, 0%);
 }
