@@ -46,18 +46,31 @@
 	}
 
 	&__author {
-		font-size: 0.625rem;
+		font-size: .9rem;
 		margin-bottom: 0.75rem;
 	}
 
 	&__title {
-		font-size: 1.0625rem;
+		font-size: 1.5rem;
 		line-height: 1.2;
 		color: $purple;
 		margin-bottom: 0.5rem;
 	}
 
 	&__description {
-		font-size: 0.8125rem;
+		font-size: 1.1rem;
+	}
+}
+
+#categories{
+	ul{
+		list-style:none;
+		padding:0;
+	}
+
+	.container{
+		@include breakpoint-down(medium){
+			padding: 0 4em;
+		}
 	}
 }

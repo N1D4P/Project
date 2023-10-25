@@ -12,6 +12,7 @@ require_once(__DIR__ . "\..\app\src\controllers\MovieController.php");
 <!DOCTYPE html>
 <html>
     <?php
+    
     try{
         $url = $_SERVER['REQUEST_URI'];
             //Si l'utilisateur demande une autre page que la page d'accueil

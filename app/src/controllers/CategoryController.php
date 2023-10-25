@@ -27,8 +27,8 @@ class CategoryController extends Db{
         }
         // Si on affiche toutes les catégories
         else{
-            // Récupérer les catégories depuis la base de données
-            $query = "SELECT category_id, category_name FROM mvtm_category";
+            // Récupérer les catégories depuis la base de données, ainsi que l'image du dernier film inséré
+            $query = "SELECT c.category_id, c.category_name, c.category_desc, content.cover_path FROM mvtm_category c INNER JOIN mvtm_content content ON mvtm_category_category_id = category_id ORDER BY content.content_id DESC";
             // On récupère la connexion à la db depuis la classe Db
             $stmt = self::getPdo()->prepare($query);
             // On exécute la requête

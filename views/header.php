@@ -3,7 +3,7 @@
 
     <nav class="container container--pall flex flex-jc-sb flex-ai-c">
       <a href="/" class="header__logo">
-        <img src="images/logo.svg" alt="MovieTime" />
+        <img id="logo" src="./assets/images/Logo_movietime.gif" alt="MovieTime" />
       </a>
 
       <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">

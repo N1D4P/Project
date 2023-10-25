@@ -6,6 +6,12 @@
     text-align: left;
   }
 
+  &__content{
+    padding-top: 6rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
   &__intro {
     margin-bottom: 3.75rem;
 
@@ -56,7 +62,6 @@
   }
 
   &__description {
-    font-size: 0.875rem;
     line-height: 1.5;
   }
 }

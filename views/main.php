@@ -1,15 +1,14 @@
 <head>
     <title>Catégories</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
 <?php
   require_once("header.php");
   ?>
     <section class="hero">
-      <div class="container">
-        <div class="hero__image"></div>
-
+      <div class="container__header">
         <div class="hero__text container--pall">
           <h2 class="purpleNeon">Des milliers de films et séries disponibles !</h2>
           <p>
@@ -19,11 +18,12 @@
           </p>
           <a href="/category" class="button hero__cta">Voir Catégories</a>
         </div>
+        <div class="hero__image"></div>
       </div>
     </section>
 
     <section class="feature">
-      <div class="feature__content container container--pall">
+      <div class="feature__content container">
         <div class="feature__intro">
           <h2>Pourquoi choisir MovieTime ?</h2>
           <p>
@@ -35,7 +35,7 @@
         <div class="feature__grid">
           <div class="feature__item">
             <div class="feature__icon">
-              <img src="/images/.svg" />
+              <img class="whyMovieTime" src="./assets/images/streaming.png" />
             </div>
             <div class="feature__title">Streaming Illimité</div>
             <div class="feature__description">
@@ -46,7 +46,7 @@
 
           <div class="feature__item">
             <div class="feature__icon">
-              <img src="/images/.svg" />
+              <img class="whyMovieTime" src="./assets/images/responsive.png" />
             </div>
             <div class="feature__title">Multi Ecrans</div>
             <div class="feature__description">
@@ -57,7 +57,7 @@
 
           <div class="feature__item">
             <div class="feature__icon">
-              <img src="/images/.svg" />
+              <img class="whyMovieTime" src="./assets/images/4k.png" />
             </div>
             <div class="feature__title">Qualité 4K</div>
             <div class="feature__description">
@@ -67,7 +67,7 @@
           </div>
 
           <div class="feature__item">
-            <div class="feature__icon"><img src="/images/.svg" /></div>
+            <div class="feature__icon"><img class="whyMovieTime" src="./assets/images/payment.png" /></div>
             <div class="feature__title">Paiement facilité</div>
             <div class="feature__description">
               Plusieurs moyens de paiements sont disponibles via les système de paiements les plus utilisés.
@@ -104,4 +104,8 @@
         </div>
       </div>
     </section>
+
+    <?php
+    require_once("footer.php");
+    ?>
   </body>
