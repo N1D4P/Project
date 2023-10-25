@@ -229,6 +229,10 @@ button:hover::before,
   }
 }
 
+ul {
+  padding: 0;
+}
+
 .header {
   position: relative;
   background-color: hsl(0, 0%, 0%);
@@ -567,6 +571,18 @@ button:hover::before,
     width: 100%;
   }
 }
+#movie #content .new {
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: hsl(288.11, 99.07%, 41.96%);
+  color: white;
+  border-radius: 20px;
+  margin: -20px 0 20px 0;
+}
+#movie #content .movie_category {
+  color: white;
+}
 #movie #content .no_margin {
   margin: 0;
 }
@@ -611,6 +627,90 @@ button:hover::before,
     width: 100%;
     height: 300px;
   }
+}
+
+.pricing {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.pricing .pricing_card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  min-width: 400px;
+  max-width: 500px;
+  width: 30%;
+  padding: 30px 20px;
+  box-shadow: 0px 2px 12px hsl(288, 99%, 42%);
+}
+.pricing .pricing_card h2 {
+  text-align: center;
+}
+.pricing .pricing_card ul {
+  list-style: none;
+}
+.pricing .pricing_card ul li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.pricing .pricing_card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/add.png");
+  background-size: contain;
+}
+.pricing .pricing_card .pricing_poster {
+  height: 200px;
+  object-fit: contain;
+}
+.pricing span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#admin_title {
+  text-align: center;
+}
+
+#categories {
+  margin-top: 50px;
+}
+
+.admin_section .add {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.admin_section .add h2 {
+  margin: 0;
+}
+.admin_section button {
+  padding: 0;
+  background: none;
+}
+.admin_section .icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.admin_section .article__editable {
+  position: relative;
+}
+.admin_section .article__editable .icons_actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 
 .footer {

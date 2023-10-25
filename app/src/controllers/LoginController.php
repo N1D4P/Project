@@ -9,7 +9,7 @@ class LoginController extends Controller{
                 // On récupère le password rentré par l'utilisateur
                 $password = htmlspecialchars($_REQUEST['password']);
                 // On écrit notre requête
-                $query = "SELECT * FROM `mvtm_customer` WHERE username=:username";
+                $query = "SELECT c.*, r.role FROM `mvtm_customer` c INNER JOIN mvtm_role r ON c.role_id = r.id WHERE username=:username";
                 // On insère dans le bloc try tout le code qui peut générer une erreur
                 try{
                     // On prépare la requête
@@ -22,7 +22,10 @@ class LoginController extends Controller{
                         if(password_verify($password, $result['password'])){
                             // Si c'est le cas, on stocke l'id de l'utilisateur et on le redirige vers la page d'accueil
                             $_SESSION['id'] = $result["customer_id"];
-                            $this->header("/");
+                            if($result["role"] === "admin")
+                                $this->header("/admin");
+                            else
+                                $this->header("/");
                         }
                         // Sinon, le mot de passe est mauvais et on affiche le message d'erreur
                         else{

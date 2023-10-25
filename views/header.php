@@ -14,8 +14,7 @@
 
       <div class="header__links hide-for-mobile">
         <a href="/">Accueil</a>
-        <a href="#">A propos</a>
-        <a href="#">Contact</a>
+        <a href="/pricing">Offres</a>
         <a href="/category">Catégories</a>
         <?php 
         // Si l'utilisateur est connecté, j'affiche Déconnexion, sinon Connexion
@@ -28,10 +27,9 @@
     </nav>
 
     <div class="header__menu has-fade">
-      <a href="">Accueil</a>
-      <a href="">A propos</a>
-      <a href="">Contact</a>
-      <a href="">Catégories</a>
+      <a href="/">Accueil</a>
+      <a href="/pricing">Offres</a>
+      <a href="/category">Catégories</a>
       <?php 
         // Si l'utilisateur est connecté, j'affiche Déconnexion, sinon Connexion
         if(isset($_SESSION["id"])) echo "<a href='/logout'>Déconnexion</a>";

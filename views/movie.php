@@ -10,9 +10,9 @@
         <div id="content">
             <div>
                 <h1><?php echo $movie["content_name"]; ?></h1>
-                <?php if($movie["new"] === 1 ) echo "<p>NEW</p>"; ?>
+                <?php if($movie["new"] === 1 ) echo "<p class='new'>NEW</p>"; ?>
             </div>
-            <a href=<?php echo "/category?id=" . $movie["category_id"]; ?>><?php echo $movie["category"]; ?></a>
+            <a class="movie_category" href=<?php echo "/category?id=" . $movie["category_id"]; ?>><?php echo $movie["category"]; ?></a>
             <p><strong>Réalisateur :</strong> <?php echo $movie["director"]; ?></p>
             <p><?php echo $movie["content_desc"]; ?></p>
             <p class="no_margin"><strong>Note globale :</strong> <?php echo $movie["rating"] ?></p>

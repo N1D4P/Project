@@ -1,7 +1,7 @@
 <?php
 
 
-class CategoryController extends Db{
+class CategoryController extends Controller{
     public function index(){
         $url = $_SERVER['REQUEST_URI'];
         // Si on affiche une catégorie en particulier

@@ -50,7 +50,7 @@
         </div>
 
         <div class="footer__links col1">
-          <a href="#">A Propos</a>
+          <a href="/pricing">Offres</a>
           <a href="#">Contact</a>
           <a href="#">Mon Compte</a>
         </div>

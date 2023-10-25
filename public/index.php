@@ -8,6 +8,8 @@ require_once(__DIR__ . "\..\app\src\controllers\LogoutController.php");
 require_once(__DIR__ . "\..\app\src\controllers\CategoryController.php");
 require_once(__DIR__ . "\..\app\src\controllers\MainController.php");
 require_once(__DIR__ . "\..\app\src\controllers\MovieController.php");
+require_once(__DIR__ . "\..\app\src\controllers\PricingController.php");
+require_once(__DIR__ . "\..\app\src\controllers\AdminController.php");
 ?>
 <!DOCTYPE html>
 <html>
