@@ -18,7 +18,7 @@
         <a href="/category">Catégories</a>
         <?php 
         // Si l'utilisateur est connecté, j'affiche Déconnexion, sinon Connexion
-          if($_SESSION["id"] !== null) echo "<a href='/logout'>Déconnexion</a>";
+          if(isset($_SESSION["id"])) echo "<a href='/logout'>Déconnexion</a>";
           else echo "<a href='/login'>Connexion</a>";
         ?>
       </div>
