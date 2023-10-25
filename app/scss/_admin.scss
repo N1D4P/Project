@@ -18,11 +18,26 @@
         }
     }
 
-    button{
+    #movie_form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgb(21 21 21);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 12px hsl(288, 99%, 42%);
+
+        input, select{
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    button:not(#movie_form button){
         padding: 0;
         background: none;
     }
-    
+
     .icon{
         width:30px;
         height:30px;

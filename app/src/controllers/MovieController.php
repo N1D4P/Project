@@ -7,11 +7,14 @@ class MovieController extends Controller{
         if(str_contains($url, "?id=") && (int)explode("=", $url)[1]){
             try{
                 // On vérifie si l'utilisateur a déjà laissé un avis sur ce film, pour l'ajout d'un nouvel avis et afficher la note de base sur la page
-                $query = "SELECT * from mvtm_rating WHERE mvtm_content_content_id=:content_id AND mvtm_customer_customer_id=:customer_id";
-                $ratingFromUser = self::getPdo()->prepare($query);
-                $ratingFromUser->execute([":content_id"=>explode("=",$url)[1],
-                                            ":customer_id"=>$_SESSION["id"]]);
-                $ratingFromUserData = $ratingFromUser->fetch(PDO::FETCH_ASSOC);
+                if(isset($_SESSION["id"])){
+                    $query = "SELECT * from mvtm_rating WHERE mvtm_content_content_id=:content_id AND mvtm_customer_customer_id=:customer_id";
+                    $ratingFromUser = self::getPdo()->prepare($query);
+                    
+                    $ratingFromUser->execute([":content_id"=>explode("=",$url)[1],
+                                                ":customer_id"=>$_SESSION["id"]]);
+                    $ratingFromUserData = $ratingFromUser->fetch(PDO::FETCH_ASSOC);
+                }
 
                 
                 // Gestion de la notation

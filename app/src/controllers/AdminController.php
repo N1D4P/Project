@@ -1,6 +1,5 @@
 <?php
 
-// commentaire
 class AdminController extends Controller{
     public function index(){
         if(isset($_SESSION["id"])){
@@ -21,27 +20,43 @@ class AdminController extends Controller{
             else{
                 if(isset($_POST["delete_movie"])){
                     $request = "DELETE FROM mvtm_content WHERE content_id=:id";
-                    $action_request = self::getPdo()->prepare($query);
+                    $action_request = self::getPdo()->prepare($request);
                     $action_request->execute([":id"=>$_POST["delete_movie"]]);
                 }
-                else if(isset($_POST["update_movie"])){
+                // else if(isset($_POST["update_movie"])){
                     
-                }
-                else if(isset($_POST["create_movie"])){
+                // }
+                // else if(isset($_POST["create_movie"])){
                     
-                }
+                // }
                 else if(isset($_POST["delete_category"])){
                     $request = "DELETE FROM mvtm_category WHERE category_id=:id";
-                    $action_request = self::getPdo()->prepare($query);
+                    $action_request = self::getPdo()->prepare($request);
                     $action_request->execute([":id"=>$_POST["delete_category"]]);
                 }
                 else if(isset($_POST["update_category"])){
-                    
+                    $request = "UPDATE mvtm_category SET category_desc=:category_desc, category_name=:category_name, active=:active WHERE category_id=:id";
+                    $action_request = self::getPdo()->prepare($request);
+                    $action_request->execute([":id"=>$_POST["update_category"],
+                                            ":category_desc"=>$_POST["category_desc"],
+                                            ":category_name"=>$_POST["category_name"],
+                                            ":active"=>$_POST["active"]
+                    ]);
                 }
                 else if(isset($_POST["create_category"])){
-                    
+                    $request = "INSERT INTO mvtm_category(category_desc, category_name, active) VALUES (:category_desc, :category_name, :active)";
+                    $action_request = self::getPdo()->prepare($request);
+                    $action_request->execute([":category_desc"=>$_POST["category_desc"],
+                                            ":category_name"=>$_POST["category_name"],
+                                            ":active"=>$_POST["active"]
+                    ]);
                 }
-
+                else if(isset($_POST["action_category"])){
+                    $request = "SELECT * FROM mvtm_category WHERE category_id=:id";
+                    $action_request = self::getPdo()->prepare($request);
+                    $action_request->execute([":id"=>$_POST["action_category"]]);
+                    $categoryUpdated = $action_request->fetch(PDO::FETCH_ASSOC);
+                }
                 // On récupère les films
                 $query = "SELECT * FROM mvtm_content";
                 // On récupère la connexion à la db depuis la classe Db
